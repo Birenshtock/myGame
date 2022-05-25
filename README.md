@@ -1,0 +1,2 @@
+# myGame
+vanilla JavaScript game
