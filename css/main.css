@@ -1,0 +1,35 @@
+body {
+    background-color: darkgrey;
+}
+
+.board td {
+    background-color: rgb(218, 146, 208);
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    margin: auto;
+    border: 5px solid;
+    text-align: center;
+    position: relative;
+}
+
+.board td:hover {
+    background-color: rgb(144, 121, 141);
+}
+
+
+/* .add-opacity {
+    opacity: 100;
+} */
+
+.hidden span {
+    opacity: 0;
+}
+
+button {
+    margin-bottom: 40px;
+}
+
+h3 {
+    color: rgb(154, 65, 114);
+}
