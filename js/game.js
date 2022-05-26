@@ -230,7 +230,7 @@ function cellClicked(elCell, i, j) {
         console.log('empty')
         expandShown(elCell, i, j)
         elCell.classList.remove('hidden')
-        loseLife(elCell)
+            // loseLife(elCell)
     } else {
         elCell.classList.remove('hidden')
     }
