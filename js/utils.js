@@ -83,7 +83,5 @@ function reset() {
     hours = 0
     minutes = 0
     window.clearInterval(interval)
-    document.getElementById('display').innerHTML = '00:00:00'
-    document.getElementById('handler').innerHTML = 'start'
     statuss = 'stopped'
 }
