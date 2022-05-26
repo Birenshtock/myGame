@@ -12,10 +12,26 @@
 <body onload="init()">
 
     <h1>Mindsweeper</h1>
-    <h3>lives: </h3>
+
+
+    <div class="lives">Life: </div>
+    <div class="face" onclick="init()"> 😃</div>
     <button onclick="levelEasy()">Easy</button>
     <button onclick="levelMedium()">Medium</button>
     <button onclick="levelHard()">Hard</button>
+
+    <div class="stop-watch">
+        <h1 id="display">00:00:00</h1>
+        <button id="handler" onclick="startStop()">start</button>
+        <button onclick="reset()">reset</button>
+
+    </div>
+
+
+
+
+
+
     <table>
 
         <tbody class="board"></tbody>

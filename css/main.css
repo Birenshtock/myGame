@@ -1,17 +1,66 @@
 body {
     background-color: darkgrey;
+    /* background-image: url(/img/mine.jpg);
+    background-size: cover; */
 }
 
-.board td {
+table {
+    background-color: rgb(110, 93, 104);
+    /* height: 400px;
+    width: 400px;
+    border-spacing: 5px; */
+}
+
+.board {
+    height: 300px;
+    width: 300px;
     background-color: rgb(218, 146, 208);
-    width: 50px;
-    height: 50px;
+    transition: 0.5s;
+    /* border: black 3px; */
+}
+
+.easy td {
+    height: 74px;
+    width: 74px;
+    /* margin: auto; */
+    /* border: 3px solid; */
+    text-align: center;
+    position: relative;
+    /* border-spacing: 5px; */
+}
+
+.medium td {
+    height: 37px;
+    width: 37px;
+    /* margin: auto; */
+    /* border: 5px solid; */
+    text-align: center;
+    position: relative;
+    /* border-spacing: 5px; */
+}
+
+.hard td {
+    height: 23px;
+    width: 23px;
+    /* margin: auto; */
+    /* border: 5px solid; */
+    text-align: center;
+    position: relative;
+    /* border-spacing: 5px; */
+}
+
+
+/* .board td {
+    background-color: rgb(218, 146, 208);
+    width: auto;
+    height: auto;
     transition: 0.5s;
     margin: auto;
     border: 5px solid;
     text-align: center;
     position: relative;
-}
+    border-spacing: 5px;
+} */
 
 .board td:hover {
     background-color: rgb(144, 121, 141);
@@ -26,10 +75,10 @@ body {
     opacity: 0;
 }
 
-button {
-    margin-bottom: 40px;
+td:not(.hidden) {
+    background-color: rgb(251, 225, 248);
 }
 
-h3 {
-    color: rgb(154, 65, 114);
+button {
+    margin-bottom: 40px;
 }
