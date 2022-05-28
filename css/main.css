@@ -1,11 +1,55 @@
 body {
-    background-color: darkgrey;
-    /* background-image: url(/img/mine.jpg);
-    background-size: cover; */
+    background-color: rgb(43, 37, 46);
+    text-align: center;
+    background-image: url(/img/44.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.title {
+    font-family: "Press Start 2P";
+    margin: auto;
+    color: beige;
+    width: 400px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.lives {
+    font-family: "Permanent Marker";
+    color: beige;
+    width: 150px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.stop-watch {
+    font-family: "Permanent Marker";
+    color: beige;
+    width: 150px;
+    display: inline-block;
+}
+
+h1 {
+    width: 140px;
+    display: inline-block;
+}
+
+button {
+    font-family: "Permanent Marker";
 }
 
 table {
-    background-color: rgb(110, 93, 104);
+    background-color: rgb(23, 17, 21);
+    /* width: 350px; */
+    margin: auto;
     /* height: 400px;
     width: 400px;
     border-spacing: 5px; */
@@ -14,7 +58,7 @@ table {
 .board {
     height: 300px;
     width: 300px;
-    background-color: rgb(218, 146, 208);
+    background-color: rgb(159, 87, 149);
     transition: 0.5s;
     /* border: black 3px; */
 }
@@ -26,6 +70,7 @@ table {
     /* border: 3px solid; */
     text-align: center;
     position: relative;
+    font-family: "Permanent Marker";
     /* border-spacing: 5px; */
 }
 
@@ -36,6 +81,7 @@ table {
     /* border: 5px solid; */
     text-align: center;
     position: relative;
+    font-family: "Permanent Marker";
     /* border-spacing: 5px; */
 }
 
@@ -46,6 +92,7 @@ table {
     /* border: 5px solid; */
     text-align: center;
     position: relative;
+    font-family: "Permanent Marker";
     /* border-spacing: 5px; */
 }
 
