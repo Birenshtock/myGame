@@ -53,32 +53,24 @@ function rightClick() {
     for (var el of noContext) {
         el.addEventListener('contextmenu', e => {
             e.preventDefault();
-            if (e.target.classList.contains('hidden')) {
-                console.log(e.target.innerText)
-                console.log('ffffffffffuck')
-                if (!e.target.originalText) {
-                    e.target.originalText = e.target.innerText
-                }
-                if (e.target.innerText === FLAG) {
-                    e.target.innerHTML = `<span> ${e.target.originalText} </span>`
-                    win()
-                } else { e.target.innerText = FLAG }
-
+            console.log(e.target)
+            var target = e.target //האלמנט שלחצתי עליו
+            if (target.tagName !== `TD`) {
+                target = target.closest('td')
             }
+            if (target.originalText === undefined) { //רק בלחיצה הראשונה על כל תא
+                target.originalText = target.innerText
+            }
+            if (target.innerText === FLAG) {
+                target.innerHTML = `<span> ${target.originalText} </span>`
+            } else { target.innerText = FLAG }
+            win()
         });
     }
 }
 
-const array1 = [1, 2, 'a', '1a'];
-
-console.log(array1.toString());
-
-
-
-
 
 function win() {
-    // rightClick()
     for (var currCell of document.querySelectorAll(`.cell`)) {
         // console.log(currCell.innerText)
         if (currCell.innerText === MINE) return
@@ -109,8 +101,6 @@ function buildBoard() {
     }
 
     addMines(board)
-
-
     return board
 }
 
@@ -204,7 +194,6 @@ function expandShown(elCell, cellI, cellJ) {
 
 
 
-
 function sadFace() {
     var sad = document.querySelector('.face')
     sad.innerText = `${SAD}`
@@ -217,20 +206,18 @@ function cellClicked(elCell, i, j) {
     clickNum++
     console.log('click num:', clickNum)
     if (elCell.innerText === FLAG) return
-
-
-    if (livesCount <= 0) {
+    if (livesCount === 1) {
+        loseLife()
         gameOver()
     } else if (elCell.innerText === MINE) {
         elCell.classList.remove('hidden')
-        loseLife(elCell)
+        loseLife()
         sadFace()
         document.querySelector('span').classList.remove('hidden')
     } else if (elCell.innerText === EMPTY) {
         console.log('empty')
         expandShown(elCell, i, j)
         elCell.classList.remove('hidden')
-            // loseLife(elCell)
     } else {
         elCell.classList.remove('hidden')
     }
@@ -240,7 +227,7 @@ function cellClicked(elCell, i, j) {
 }
 
 
-function loseLife(elCell) {
+function loseLife() {
     --livesCount
     console.log('Lives:', livesCount)
     var elLives = document.querySelector('.lives')
@@ -252,10 +239,11 @@ function loseLife(elCell) {
 
 
 function gameOver(elCell) {
-    console.log('game over')
-    showMine(elCell)
+
     var sad = document.querySelector('.face')
     sad.innerText = `${SAD}`
+    console.log('game over')
+    showMine(elCell)
     stopWatch()
 
 }
