@@ -1,118 +1,16 @@
-body {
-    background-color: rgb(43, 37, 46);
-    text-align: center;
-    background-image: url(/img/44.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
+/* components */
 
-.face {
-    transform: scale(3);
-    margin-bottom: 30px;
-}
+@import 'components/header.css';
+@import 'components/nav.css';
+@import 'components/gallery.css';
+@import 'components/editor-area/grid.css';
+@import 'components/editor-area/canvas.css';
 
-.title {
-    font-family: "Press Start 2P";
-    margin: auto;
-    color: beige;
-    width: 400px;
-    margin: auto;
-    margin-top: 30px;
-}
+/* setup */
 
-.main {
-    display: flex;
-    justify-content: space-between;
-    height: 50px;
-}
+@import 'setup/var.css';
+@import 'setup/layout.css';
 
-.lives {
-    font-family: "Permanent Marker";
-    color: beige;
-    width: 150px;
-    display: inline-block;
-    margin-top: 30px;
-}
+/* mq */
 
-.stop-watch {
-    font-family: "Permanent Marker";
-    color: beige;
-    width: 150px;
-    display: inline-block;
-}
-
-h1 {
-    width: 140px;
-    display: inline-block;
-}
-
-button {
-    font-family: "Permanent Marker";
-}
-
-table {
-    background-color: rgb(23, 17, 21);
-    /* width: 350px; */
-    margin: auto;
-    /* height: 400px;
-    width: 400px;
-    border-spacing: 5px; */
-}
-
-.board {
-    height: 300px;
-    width: 300px;
-    background-color: rgb(159, 87, 149);
-    transition: 0.5s;
-    /* border: black 3px; */
-}
-
-.easy td {
-    height: 74px;
-    width: 74px;
-    /* margin: auto; */
-    /* border: 3px solid; */
-    text-align: center;
-    position: relative;
-    font-family: "Permanent Marker";
-    /* border-spacing: 5px; */
-}
-
-.medium td {
-    height: 37px;
-    width: 37px;
-    /* margin: auto; */
-    /* border: 5px solid; */
-    text-align: center;
-    position: relative;
-    font-family: "Permanent Marker";
-    /* border-spacing: 5px; */
-}
-
-.hard td {
-    height: 23px;
-    width: 23px;
-    /* margin: auto; */
-    /* border: 5px solid; */
-    text-align: center;
-    position: relative;
-    font-family: "Permanent Marker";
-    /* border-spacing: 5px; */
-}
-
-.board td:hover {
-    background-color: rgb(144, 121, 141);
-}
-
-.hidden span {
-    opacity: 0;
-}
-
-td:not(.hidden) {
-    background-color: rgb(251, 225, 248);
-}
-
-button {
-    margin-bottom: 40px;
-}
+@import 'mq/mq.css'

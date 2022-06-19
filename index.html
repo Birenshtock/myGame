@@ -5,39 +5,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MEMEGEN</title>
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Press+Start+2P&family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
 </head>
 
 <body onload="init()">
 
-    <h1 class="title">Minesweeper</h1>
-    <div class="main">
-        <div class="lives">Life: </div>
+    <header class="header-container ">
 
-        <div class="stop-watch">
-            <h1 id="display">00:00:00</h1>
+        <img class="logo" src="img/LOGO.png">
+        <ul>
+            <li><button onclick="onGalleryClick()" class="hBtn">Gallery</button></li>
+            <li><button class="hBtn">Memes</button></li>
+            <li><button class="hBtn">About</button></li>
+        </ul>
+        <button onclick="toggleMenu(this)" class="menu-toggle">☰</button>
+    </header>
+
+
+
+
+
+    <main>
+        <div class="nav">
+            <input class="search" type="text" placeholder="search  ">
+            <!-- <button class="searchBtn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+
+            <div class="words">
+                Funny Animal
+            </div>
+
+            <div class="more">More</div>
+
+        </div>
+        <div class="gallery">
+
+
+            <div class="gallery-grid">
+                <img id="01" class="img" src="img/1.jpg">
+                <img id="02" class="img" src="img/2.jpg">
+                <img id="03" class="img" src="img/3.jpg">
+                <img id="04" class="img" src="img/4.jpg">
+                <img id="05" class="img" src="img/5.jpg">
+                <img id="06" class="img" src="img/6.jpg">
+                <img id="07" class="img" src="img/7.jpg">
+                <img id="08" class="img" src="img/8.jpg">
+                <img id="09" class="img" src="img/9.jpg">
+                <img id="10" class="img" src="img/10.jpg">
+                <img id="11" class="img" src="img/11.jpg">
+                <img id="12" class="img" src="img/12.jpg">
+                <img id="13" class="img" src="img/13.jpg">
+                <img id="14" class="img" src="img/14.jpg">
+                <img id="15" class="img" src="img/15.jpg">
+                <img id="16" class="img" src="img/16.jpg">
+                <img id="17" class="img" src="img/17.jpg">
+                <img id="18" class="img" src="img/18.jpg">
+
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+    <div class="hi">
+
+        <div class="editor-area">
+            <div class="canvas-container">
+                <canvas id="my-canvas" height="450" width="400" border-radus="33"></canvas>
+            </div>
+            <section class="grid-container">
+                <input class="item item0" type="text" placeholder="I Am Brave" oninput="drawText(this.value)">
+                <button onclick="onDownText()" class="item item14"><i class="fa-solid fa-arrow-down"></i></button>
+                <button onclick="onUpText()" class="item item15"><i class="fa-solid fa-arrow-up"></i></button>
+                <button onclick="onSelectText()" class="item item1"><i class="fa-solid fa-arrows-up-down"></i></button>
+                <button onclick="onPlusAnotherText()" class="item item2"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="onDeleteText()" class="item item3"><i class="fa-solid fa-trash"></i></button>
+
+                <button onclick="onBiggerFont()" class="item item4">A+</button>
+                <button onclick="onSmallerFont()" class="item item5">A-</button>
+                <button onclick="onTextLeft()" class="item item6"><i class="fa-solid fa-align-left"></i></button>
+                <button onclick="onTextCenter()" class="item item7"><i class="fa-solid fa-align-center"></i></button>
+                <button onclick="onTextRight()" class="item item8"><i class="fa-solid fa-align-right"></i></button>
+                <select class="item item9" onchange="onSetFont(this.value)">
+                <option value="Impact">Impact</option>
+                <option value="Haettenschweiler">Haettenschweiler</option>
+                <option value="Arial Narrow Bold">Arial Narrow Bold</option>
+                <option value="sans-serif">sans-serif</option>
+            </select>
+                <button class="item item10"><i class="fa-solid fa-s"></i><input class="selectColor" oninput="OnSetStrokeColor(this.value)" type="color"></button>
+                <button class="item item11"> <span> <i class="fa-solid fa-palette"></i> </span> <input class="selectColor" oninput="OnSetFillColor(this.value)" type="color"></button>
+                <a href="#" onclick="downloadCanvas(this)" class="item item12" download="">Download</a>
+                <button onclick="uploadImg()" class="item item13">Share</button>
+            </section>
+            <p class="user-msg"></p>
+            <div class="share-container"></div>
+
+
         </div>
     </div>
 
 
-    <div class="face" onclick="init()"> 😃</div>
-    <button onclick="levelEasy()">Easy</button>
-    <button onclick="levelMedium()">Medium</button>
-    <button onclick="levelHard()">Hard</button>
-
-    <table>
-
-        <tbody class="board"></tbody>
-    </table>
-
-
-
-
-    <script src="js/utils.js"></script>
-    <script src="js/game.js"></script>
+    <script src="https://kit.fontawesome.com/d81b10552f.js" crossorigin="anonymous"></script>
+    <script src="js/uploadServices.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

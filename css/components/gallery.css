@@ -1,0 +1,33 @@
+body {
+    background-color: #22252c;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    max-width: 1130px;
+    height: 100%;
+    border-radius: 10px;
+    justify-content: center;
+    background-color: #383b42;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.gallery {
+    width: 90%;
+    margin: auto;
+    align-self: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+
+/* .gallery-row {} */
+
+.img {
+    width: 17%;
+    height: 17%;
+    border-radius: 10px;
+    margin: 1%;
+}
