@@ -15,6 +15,7 @@ var gFocusIdx = -1
 var gIsSelected //ה-value של הkey שיש בו focus:true
 var gCurrImageId
 var gMappingTexts = {}
+const STORAGE_KEY = 'imgDB'
     // var vanvas = document.getElementById('#my-canvas')
     // vanvas.width = 100 %
 
@@ -38,6 +39,14 @@ var gImgs = [{ id: '01', url: 'img/1.jpg' },
     { id: 17, url: 'img/17.jpg' },
     { id: 18, url: 'img/18.jpg' },
 ];
+
+function _saveMemeToStorage() {
+    saveToStorage(STORAGE_KEY, gMappingTexts)
+}
+
+function onMemeClick() {
+    var meme = loadFromStorage(STORAGE_KEY)
+}
 
 
 function init() {
@@ -350,6 +359,7 @@ function downloadCanvas(elLink) {
         elLink.download = 'my-img.jpg'
         console.log('jjjj')
     }, 5000)
+    _saveMemeToStorage()
 }
 
 

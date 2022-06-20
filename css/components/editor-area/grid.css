@@ -16,6 +16,7 @@
 
 .grid-container {
     width: 50%;
+    max-width: 400px;
     height: 50%;
     margin: 0;
     display: grid;
