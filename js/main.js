@@ -352,14 +352,13 @@ function downloadCanvas(elLink) {
     //     }
     // }
 
-    const wait = setTimeout(function() {
-        const data = gCanvas.toDataURL() // for 
-        elLink.href = data
-        console.log(data)
-        elLink.download = 'my-img.jpg'
-        console.log('jjjj')
-    }, 5000)
-    _saveMemeToStorage()
+
+    const data = gCanvas.toDataURL() // for 
+    elLink.href = data
+    console.log(data)
+    elLink.download = 'my-img.jpg'
+    console.log('jjjj')
+
 }
 
 
