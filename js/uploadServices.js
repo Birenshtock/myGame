@@ -12,6 +12,24 @@ function uploadImg() {
     doUploadImg(imgDataUrl, onSuccess);
 }
 
+var savedMeme = 0
+
+// function onSave() {
+//     savedMeme++
+//     const imgDataUrl = gCanvas.toDataURL("image/jpeg");
+//     localStorage.setItem("recent-image", imgDataUrl)
+
+// }
+
+// document.addEventListener("DOMContentLoaded", () => {
+//     const recentImgDataUrl = localStorage.getItem("recent-image")
+//     if (recentImgDataUrl) {
+//         document.querySelector('.savedMemes').innerHTML += ` <img id="imgPreview${savedMeme}" src="" alt="">`
+//         document.querySelector(`#imgPreview${savedMeme}`).setAttribute("src", recentImgDataUrl)
+//     }
+// })
+
+
 function doUploadImg(imgDataUrl, onSuccess) {
     //Pack the image for delivery
     const formData = new FormData();
